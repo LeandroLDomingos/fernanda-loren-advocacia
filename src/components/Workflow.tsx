@@ -34,9 +34,6 @@ export default function Workflow() {
             <span className="text-accent font-sans font-semibold text-[10px] block mb-4 uppercase tracking-[0.4em]">METODOLOGIA</span>
             <h2 className="text-3xl md:text-7xl font-serif font-light tracking-tight text-primary">Protocolo de <span className="italic text-accent">Atuação</span></h2>
           </div>
-          <p className="text-mocha/50 font-sans text-[10px] uppercase tracking-[0.2em] max-w-[200px] leading-relaxed">
-            Workflow Standard Operating Procedure / Lóren Advocacy V3
-          </p>
         </div>
 
         <div className="space-y-4 md:space-y-6">

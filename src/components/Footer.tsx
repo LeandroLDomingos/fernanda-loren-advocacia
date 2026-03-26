@@ -29,7 +29,7 @@ export default function Footer() {
           <div>
             <h3 className="text-[10px] font-sans font-bold text-accent mb-8 md:mb-10 uppercase tracking-[0.4em]">Contato</h3>
             <ul className="space-y-5 text-bg-light/60 font-light text-sm">
-              <li className="hover:text-accent transition-colors cursor-pointer">contato@fladvocacia.com.br</li>
+              <li className="hover:text-accent transition-colors cursor-pointer">atendimento@fernandalorenadvocacia.com.br</li>
               <li className="hover:text-accent transition-colors cursor-pointer">{CONTACT.PHONE_DISPLAY}</li>
               <li className="pt-6 border-t border-bg-light/10 text-[10px] font-mono uppercase tracking-[0.2em] text-accent">
                 Av. Rodoviária 155 - Lundceia - Em frente ao INSS Lagoa Santa - CEP 33232-054
@@ -44,11 +44,10 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
             <div className="flex gap-6 md:gap-8">
-              <a href="#" className="text-bg-light/40 hover:text-accent transition-colors uppercase text-[10px] font-bold tracking-[0.3em]">Instagram</a>
-              <a href="#" className="text-bg-light/40 hover:text-accent transition-colors uppercase text-[10px] font-bold tracking-[0.3em]">LinkedIn</a>
+              <a href="https://www.instagram.com/fernandalorenadvocacia/" className="text-bg-light/40 hover:text-accent transition-colors uppercase text-[10px] font-bold tracking-[0.3em]">Instagram</a>
             </div>
             <div className="bg-bg-light/5 px-4 md:px-6 py-2.5 border border-bg-light/10 font-mono text-[9px] tracking-[0.4em] uppercase text-accent">
-              {BRAND.NAME.split(' ')[0]} ADVOCACY v3.0
+              FERNANDA LÓREN ADVOCACIA
             </div>
           </div>
         </div>

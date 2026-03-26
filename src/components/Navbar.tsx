@@ -5,16 +5,28 @@ import { BRAND, CONTACT } from '../constants';
 
 const whatsappUrl = `https://wa.me/${CONTACT.WHATSAPP_NUMBER}?text=${encodeURIComponent(CONTACT.WHATSAPP_MESSAGE)}`;
 
-const navLinks = ['Início', 'Serviços', 'Sobre', 'Metodologia', 'Depoimentos'];
+const navLinks = [
+  { label: 'Início',      id: 'início' },
+  { label: 'Serviços',    id: 'serviços' },
+  { label: 'Sobre',       id: 'sobre' },
+  { label: 'Metodologia', id: 'metodologia' },
+  { label: 'Depoimentos', id: 'depoimentos' },
+];
+
+function scrollTo(id: string) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const offset = 100;
+  const top = el.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({ top, behavior: 'smooth' });
+}
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -42,17 +54,17 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-10">
-          {navLinks.map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+          {navLinks.map(({ label, id }) => (
+            <button
+              key={id}
+              onClick={() => scrollTo(id)}
               className={`text-[10px] font-sans font-bold uppercase tracking-[0.2em] transition-colors duration-500 relative group ${
                 isScrolled ? "text-primary/70 hover:text-primary" : "text-bg-light/70 hover:text-bg-light"
               }`}
             >
-              {item}
+              {label}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-full"></span>
-            </a>
+            </button>
           ))}
         </div>
 
@@ -91,15 +103,14 @@ export default function Navbar() {
             transition={{ duration: 0.2 }}
             className="absolute top-[calc(100%+8px)] left-4 right-4 bg-bg-light/95 backdrop-blur-md rounded-2xl shadow-xl border border-primary/10 p-6 flex flex-col gap-5"
           >
-            {navLinks.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                onClick={() => setMenuOpen(false)}
-                className="text-[11px] font-sans font-bold uppercase tracking-[0.3em] text-primary/70 hover:text-primary transition-colors"
+            {navLinks.map(({ label, id }) => (
+              <button
+                key={id}
+                onClick={() => { scrollTo(id); setMenuOpen(false); }}
+                className="text-left text-[11px] font-sans font-bold uppercase tracking-[0.3em] text-primary/70 hover:text-primary transition-colors"
               >
-                {item}
-              </a>
+                {label}
+              </button>
             ))}
             <a
               href={whatsappUrl}

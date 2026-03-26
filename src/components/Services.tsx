@@ -68,7 +68,7 @@ export default function Services() {
             Áreas de <span className="italic text-accent">atuação</span>
           </h2>
           <div className="mt-4 md:mt-8 flex flex-col items-start md:items-end">
-            <span className="text-primary/60 font-sans font-bold text-[10px] block mb-4 uppercase tracking-[0.4em]">LÓREN ADVOCACY</span>
+            <span className="text-primary/60 font-sans font-bold text-[10px] block mb-4 uppercase tracking-[0.4em]">FERNANDA LÓREN ADVOCACIA</span>
             <div className="h-[1px] w-48 bg-primary/20"></div>
           </div>
         </div>

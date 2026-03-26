@@ -17,7 +17,8 @@ export const IMAGES = {
 export const CONTACT = {
   WHATSAPP_NUMBER: "5531989803313",
   PHONE_DISPLAY: "31 98980-3313",
-  WHATSAPP_MESSAGE: "Olá Dra. Fernanda, gostaria de agendar uma consultoria previdenciária.",
+  WHATSAPP_MESSAGE: `Olá, tudo bem? 😊
+Vim pelo site e gostaria de atendimento.`,
 };
 
 export const BRAND = {
