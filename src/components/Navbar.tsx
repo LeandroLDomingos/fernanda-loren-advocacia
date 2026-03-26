@@ -24,21 +24,29 @@ function scrollTo(id: string) {
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
+
+  const hidden = isMobile && !isScrolled;
 
   return (
     <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
       <motion.div
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: isScrolled ? 0 : -80, opacity: isScrolled ? 1 : 0 }}
+        animate={{ y: hidden ? -80 : 0, opacity: hidden ? 0 : 1 }}
         transition={{ duration: 0.4, ease: 'easeInOut' }}
         className={`transition-colors duration-500 border rounded-full px-4 md:px-8 py-4 flex items-center justify-between w-full max-w-[1100px] shadow-lg bg-bg-light/90 backdrop-blur-md border-primary/10 ${
-          !isScrolled ? 'pointer-events-none' : ''
+          hidden ? 'pointer-events-none' : ''
         }`}
       >
         {/* Brand */}
@@ -47,7 +55,7 @@ export default function Navbar() {
             <span className="font-[family-name:var(--font-brand)] text-lg md:text-2xl tracking-tight font-bold text-primary">
               {BRAND.NAME}
             </span>
-            <span className="text-[8px] uppercase tracking-[0.4em] text-accent font-sans font-bold mt-1">{BRAND.SUBTITLE}</span>
+            <span className="hidden md:block text-[8px] uppercase tracking-[0.4em] text-accent font-sans font-bold mt-1">{BRAND.SUBTITLE}</span>
           </div>
         </div>
 
