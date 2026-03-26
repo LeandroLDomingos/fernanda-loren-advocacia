@@ -8,14 +8,14 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col md:flex-row items-stretch bg-primary overflow-hidden">
       {/* Text Content Side */}
-      <div className="flex-1 flex items-center justify-center p-8 md:p-24 z-10">
-        <div className="max-w-xl text-center md:text-left space-y-6 md:space-y-12">
+      <div className="flex-1 flex items-center justify-center px-6 py-16 md:p-24 z-10">
+        <div className="max-w-xl text-center md:text-left space-y-5 md:space-y-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
-            <h1 className="text-3xl md:text-6xl font-serif leading-tight text-bg-light">
+            <h1 className="text-2xl sm:text-3xl md:text-6xl font-[family-name:var(--font-brand)] leading-snug text-bg-light">
               {BRAND.TAGLINE}
             </h1>
           </motion.div>
@@ -24,13 +24,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
-            className="space-y-8"
+            className="space-y-5 md:space-y-8"
           >
-            <p className="text-base md:text-2xl font-serif leading-relaxed text-bg-light/80">
+            <p className="text-sm sm:text-base md:text-2xl font-serif leading-relaxed text-bg-light/80">
               Se você enfrenta dúvidas, negativas ou precisa de orientação sobre seus direitos no INSS, conte com um atendimento acolhedor e transparente.
             </p>
 
-            <div className="pt-4 md:pt-8">
+            <div className="pt-2 md:pt-8">
               <a
                 href={whatsappUrl}
                 target="_blank"

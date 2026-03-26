@@ -35,19 +35,18 @@ export default function Navbar() {
     <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
       <motion.div
         initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        className={`transition-all duration-500 border rounded-full px-4 md:px-8 py-4 flex items-center justify-between w-full max-w-[1100px] shadow-lg ${
-          isScrolled
-            ? "bg-bg-light/90 backdrop-blur-md border-primary/10"
-            : "bg-primary/20 backdrop-blur-sm border-white/10"
+        animate={{ y: isScrolled ? 0 : -80, opacity: isScrolled ? 1 : 0 }}
+        transition={{ duration: 0.4, ease: 'easeInOut' }}
+        className={`transition-colors duration-500 border rounded-full px-4 md:px-8 py-4 flex items-center justify-between w-full max-w-[1100px] shadow-lg bg-bg-light/90 backdrop-blur-md border-primary/10 ${
+          !isScrolled ? 'pointer-events-none' : ''
         }`}
       >
         {/* Brand */}
         <div className="flex items-center gap-3">
           <div className="flex flex-col leading-none">
-            <span className={`font-[family-name:var(--font-brand)] text-lg md:text-2xl tracking-tight font-bold transition-colors duration-500 ${
-              isScrolled ? "text-primary" : "text-bg-light"
-            }`}>{BRAND.NAME}</span>
+            <span className="font-[family-name:var(--font-brand)] text-lg md:text-2xl tracking-tight font-bold text-primary">
+              {BRAND.NAME}
+            </span>
             <span className="text-[8px] uppercase tracking-[0.4em] text-accent font-sans font-bold mt-1">{BRAND.SUBTITLE}</span>
           </div>
         </div>
@@ -58,9 +57,7 @@ export default function Navbar() {
             <button
               key={id}
               onClick={() => scrollTo(id)}
-              className={`text-[10px] font-sans font-bold uppercase tracking-[0.2em] transition-colors duration-500 relative group ${
-                isScrolled ? "text-primary/70 hover:text-primary" : "text-bg-light/70 hover:text-bg-light"
-              }`}
+              className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] transition-colors duration-500 relative group text-primary/70 hover:text-primary"
             >
               {label}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all duration-500 group-hover:w-full"></span>
@@ -73,19 +70,14 @@ export default function Navbar() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className={`hidden md:block px-6 md:px-8 py-2.5 rounded-full text-[10px] font-sans font-bold uppercase tracking-[0.2em] transition-all duration-500 shadow-md ${
-            isScrolled
-              ? "bg-primary text-bg-light hover:bg-accent hover:text-primary"
-              : "bg-bg-light text-primary hover:bg-accent hover:text-primary"
-          }`}>
+          className="hidden md:block px-6 md:px-8 py-2.5 rounded-full text-[10px] font-sans font-bold uppercase tracking-[0.2em] transition-all duration-500 shadow-md bg-primary text-bg-light hover:bg-accent hover:text-primary"
+        >
           Consultoria
         </a>
 
         {/* Mobile hamburger */}
         <button
-          className={`md:hidden p-2 rounded-full transition-colors duration-300 ${
-            isScrolled ? "text-primary" : "text-bg-light"
-          }`}
+          className="md:hidden p-2 rounded-full transition-colors duration-300 text-primary"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
         >
