@@ -15,12 +15,13 @@ export const IMAGES = {
 };
 
 export const CONTACT = {
-  WHATSAPP_NUMBER: "5511999999999", // Replace with real number
+  WHATSAPP_NUMBER: "5531989803313",
+  PHONE_DISPLAY: "31 98980-3313",
   WHATSAPP_MESSAGE: "Olá Dra. Fernanda, gostaria de agendar uma consultoria previdenciária.",
 };
 
 export const BRAND = {
-  NAME: "FERNANDA LOREN",
+  NAME: "FERNANDA LÓREN",
   SUBTITLE: "Advocacia Previdenciária",
   TAGLINE: "Cuidar de quem contribuiu a vida inteira é mais que profissão: é compromisso.",
 };
