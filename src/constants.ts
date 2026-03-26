@@ -4,8 +4,8 @@
  */
 
 export const IMAGES = {
-  // Main hero image (Professional woman in a blue blazer)
-  HERO_PROFESSIONAL: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop",
+  // Main hero image
+  HERO_PROFESSIONAL: "/capa.jpeg",
   
   // About section image (Professional office/meeting setting)
   ABOUT_OFFICE: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop",
