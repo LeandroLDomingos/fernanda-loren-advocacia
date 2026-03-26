@@ -48,14 +48,11 @@ export default function Hero() {
           className="absolute inset-0"
         >
           {/* Using a placeholder that matches the description: Professional woman in a blue blazer */}
-          <img 
-            src={IMAGES.HERO_PROFESSIONAL} 
+          <img
+            src={IMAGES.HERO_PROFESSIONAL}
             alt="Fernanda Loren - Advocacia Previdenciária"
-            className="w-full h-full object-cover contrast-[105%]"
-            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover"
           />
-          {/* Subtle overlay to blend with the cream side */}
-          <div className="absolute inset-0 bg-primary/5 mix-blend-multiply"></div>
         </motion.div>
         
         {/* Decorative elements */}

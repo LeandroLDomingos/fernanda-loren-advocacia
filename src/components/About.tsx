@@ -13,11 +13,10 @@ export default function About() {
           className="relative"
         >
           <div className="aspect-[4/5] overflow-hidden rounded-sm shadow-2xl">
-            <img 
-              src={IMAGES.ABOUT_OFFICE} 
-              alt="Fernanda Loren" 
-              className="w-full h-full object-cover grayscale-[10%] contrast-[105%]"
-              referrerPolicy="no-referrer"
+            <img
+              src="/sobre.jpeg"
+              alt="Fernanda Loren"
+              className="w-full h-full object-cover"
             />
           </div>
           <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-accent/10 -z-10 rounded-full blur-3xl"></div>
