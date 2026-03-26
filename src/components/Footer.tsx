@@ -64,7 +64,7 @@ export default function Footer() {
 
         <div className="pt-12 border-t border-bg-light/5 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
           <p className="text-bg-light/30 text-[10px] uppercase tracking-[0.3em] font-sans">
-            © 2024 {BRAND.NAME} / Direitos Reservados
+            © 2026 {BRAND.NAME} / Direitos Reservados
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
             <div className="flex gap-6 md:gap-8">
