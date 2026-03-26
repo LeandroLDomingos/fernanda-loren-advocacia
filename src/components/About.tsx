@@ -48,6 +48,10 @@ export default function About() {
             <p className="italic font-medium text-primary">
               "Justiça não é apenas sobre leis, é sobre dignidade humana e o reconhecimento de uma vida de trabalho."
             </p>
+            <div className="pt-2">
+              <p className="font-serif font-semibold text-primary text-base">Fernanda Lóren Ferreira Santos</p>
+              <p className="text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-accent mt-1">OAB/MG 187.526</p>
+            </div>
           </div>
 
           <div className="pt-8 grid grid-cols-2 gap-8">

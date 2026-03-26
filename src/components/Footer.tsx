@@ -28,6 +28,10 @@ export default function Footer() {
             <p className="text-bg-light/50 text-base md:text-xl max-w-md leading-relaxed font-serif italic">
               "{BRAND.TAGLINE}"
             </p>
+            <div className="mt-6">
+              <p className="text-bg-light font-serif font-semibold text-sm">Fernanda Lóren Ferreira Santos</p>
+              <p className="text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-accent mt-1">OAB/MG 187.526</p>
+            </div>
           </div>
 
           <div>
