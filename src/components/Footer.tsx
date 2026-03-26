@@ -66,6 +66,17 @@ export default function Footer() {
           <p className="text-bg-light/30 text-[10px] uppercase tracking-[0.3em] font-sans">
             © 2026 {BRAND.NAME} / Direitos Reservados
           </p>
+          <p className="text-bg-light/20 text-[10px] uppercase tracking-[0.3em] font-sans">
+            Desenvolvido por{' '}
+            <a
+              href="https://devnity.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors"
+            >
+              Devnity
+            </a>
+          </p>
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
             <div className="flex gap-6 md:gap-8">
                 <a href="https://www.instagram.com/fernandalorenadvocacia/" target="_blank" rel="noopener noreferrer" className="text-bg-light/40 hover:text-accent transition-colors uppercase text-[10px] font-bold tracking-[0.3em]">Instagram</a>
