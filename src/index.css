@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  
+  --color-primary: #244066;   /* New Deep Blue requested by user */
+  --color-accent: #89CFF0;    /* Soft Blue from blazer */
+  --color-bg-light: #F2E8DA;  /* Warm Cream from background */
+  --color-surface: #E8DCCB;   /* Slightly darker cream for surfaces */
+  --color-ink: #2D2118;       /* Deepest brown for high contrast */
+}
+
+@layer base {
+  body {
+    @apply bg-bg-light text-primary overflow-x-hidden;
+    font-family: var(--font-serif); /* Defaulting to serif for that editorial feel */
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif font-medium tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 1px var(--color-primary);
+    color: transparent;
+  }
+  
+  .grainy-bg {
+    background-color: var(--color-bg-light);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3BaseFilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/feFilter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-blend-mode: overlay;
+    opacity: 0.98;
+  }
+}
