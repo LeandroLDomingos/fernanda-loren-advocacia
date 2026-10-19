@@ -16,6 +16,7 @@ export default function About() {
             <img
               src="/sobre.jpeg"
               alt="Fernanda Lóren"
+              loading="lazy"
               className="w-full h-full object-cover"
             />
           </div>
